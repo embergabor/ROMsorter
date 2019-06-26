@@ -1,4 +1,4 @@
-package hu.embergabor;
+package hu.embergabor.romsorter.model;
 
 import java.nio.file.Path;
 
@@ -8,17 +8,19 @@ public class Rom {
     private String type;
     private String version;
     private String filename;
+    private String extension;
     private Path path;
 
     public Rom() {
     }
 
-    public Rom(String title, String region, String type, String version, String filename, Path path) {
+    public Rom(String title, String region, String type, String version, String filename, String extension, Path path) {
         this.title = title;
         this.region = region;
         this.type = type;
         this.version = version;
         this.filename = filename;
+        this.extension = extension;
         this.path = path;
     }
 
@@ -60,6 +62,14 @@ public class Rom {
 
     public void setFilename(String filename) {
         this.filename = filename;
+    }
+
+    public String getExtension() {
+        return extension;
+    }
+
+    public void setExtension(String extension) {
+        this.extension = extension;
     }
 
     public Path getPath() {
